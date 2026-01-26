@@ -6,5 +6,5 @@ guess = int(input("Guess a number between 1 and 10: "))
 if guess == number:
     print("Congratulations! You guessed it right.")
 else:
-    print(f"Sorry! The correct number was {number}.")
+    print(f"Sorrry! The correct number was {number}.")
 
