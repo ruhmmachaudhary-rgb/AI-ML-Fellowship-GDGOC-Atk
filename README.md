@@ -15,5 +15,7 @@ week-1 task
 
 task2:
 This line was added in practice branch to demonstrate branching.
+and i merge the branch 
+adding a new branch to merge branch through pulling (pr)
 
 
