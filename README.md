@@ -13,5 +13,7 @@ week-1 task
 3. `String_reverse.py` — reverses a string.
 4. `number_guessing_game.py` — a simple number guessing game.
 
+task2:
+This line was added in practice branch to demonstrate branching.
 
 
