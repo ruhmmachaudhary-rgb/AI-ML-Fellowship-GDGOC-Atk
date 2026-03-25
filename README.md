@@ -1,74 +1,109 @@
-# AI-ML Fellowship – Weekly Progress
+ Multi-Dataset Machine Learning & Data Analysis Project
 
-##  Week 1 – Python & GitHub Fundamentals
+This repository contains multiple machine learning tasks performed on real-world datasets, including data preprocessing, exploratory data analysis (EDA), linear & logistic regression, model evaluation, and dataset-specific analysis.
 
-In Week 1, I learned the basics of GitHub and Python programming.
-
-###  GitHub Concepts
-
-* Learned how to create a repository.
-* Understood the purpose of branches and how they help manage different versions of a project.
-* Practiced uploading files and organizing project folders.
-* Learned how to commit changes and keep track of project updates.
-
-###  Python OOP Concepts
-
-* Encapsulation: Protecting data within a class.
-* Inheritance: Creating child classes from a parent class to reuse code.
-* Polymorphism: Using the same method name with different behaviors.
-* Classes & Objects: Understanding how real-world entities can be modeled in Python.
-
- This week built my foundation in programming and version control.
-
----
-
-##  Week 2 – Exploratory Data Analysis (EDA)
-
-In Week 2, I focused on understanding datasets and analyzing data using Python libraries.
-
-###  Dataset Understanding
-
-* Learned how to load and inspect datasets.
-* Explored data types, columns, and dataset structure.
-
-###  Libraries Used
-
-* NumPy: For numerical operations.
-* Pandas:For data manipulation and analysis.
-* Matplotlib & Seaborn:For creating meaningful visualizations.
-
-###  Data Preparation
-
-* Performed data cleaning by handling missing values.
-* Applied preprocessing techniques to improve data quality.
-
-###  Data Visualization
-
-* Created graphs to identify patterns and trends.
-* Used visual insights to better understand the dataset.
-
- This week strengthened my data analysis skills and improved my ability to extract insights from data.
-
----
-
-##  How to Run the Project
-
-1. Open the notebook in Google Colab.
-2. Run all cells sequentially.
-3. Make sure the internet is enabled to load datasets.
-
----
-
-## Tools & Technologies
-
-* Python
-* Google Colab
-* GitHub
-* NumPy
-* Pandas
-* Matplotlib
-* Seaborn
-
----
-
-This repository documents my learning journey in AI & Machine Learning as I continue building strong tec
+ Datasets
+Heart Disease Dataset
+Sources: Cleveland, Hungarian, Switzerland, VA datasets
+Files: cleveland.data, processed.cleveland.data, hungarian.data, etc.
+Task: Predict heart disease presence using medical features
+MovieLens 100K Dataset
+Files: ml-100k/u.data, ml-100k/u.user, ml-100k/u.item
+Task: Basic data analysis on user ratings and movie metadata
+IMDB Movie Reviews
+File: IMDB Dataset.csv
+Task: Text preprocessing, sentiment analysis
+Air Quality Dataset
+File: AirQualityUCI.csv
+Task: Time series preprocessing, resampling, interpolation, smoothing
+ Data Preprocessing
+Heart Disease
+Columns standardized across datasets
+Missing values handled with imputation
+Features like age, cholesterol, blood pressure used as inputs
+Target variable: presence of heart disease
+MovieLens
+Ratings, user info, and movie info merged
+Categorical features (occupation, genre) encoded
+Dataset ready for collaborative filtering or exploratory analysis
+IMDB Reviews
+Reviews cleaned by:
+Lowercasing
+Removing punctuation and stopwords
+Tokenization
+Joining back cleaned tokens
+Prepared for NLP or sentiment classification
+Air Quality
+Date and Time combined into DateTime index
+Invalid timestamps dropped
+Resampled hourly using mean
+Linear interpolation for missing values
+Optional smoothed CO column (rolling mean)
+📈 Linear Regression
+Applied to predict continuous variables (e.g., car prices or numerical heart metrics)
+Steps:
+Feature normalization
+Train-test split
+Model fitting
+Predictions
+Evaluation using:
+Mean Squared Error (MSE)
+Root Mean Squared Error (RMSE)
+R² Score
+ Logistic Regression
+Applied for classification tasks (e.g., heart disease, IMDB sentiment)
+Steps:
+Encode categorical variables
+Train-test split
+Fit logistic regression
+Predict class probabilities
+Evaluation using:
+Accuracy
+Confusion matrix
+Precision, Recall, F1-score
+ROC curve and AUC
+ Model Evaluation
+Metrics for regression:
+MSE, RMSE, R²
+Metrics for classification:
+Accuracy, Precision, Recall, F1-score
+ROC-AUC
+Visualizations included:
+Feature distributions
+Predicted vs Actual plots
+Confusion matrices
+ROC curves
+🛠 Tools & Libraries
+Python 3.12
+pandas, numpy
+matplotlib, seaborn
+scikit-learn
+NLTK (for text preprocessing)
+zipfile (for compressed dataset reading)
+ File Structure
+project/
+│
+├─ datasets/
+│   ├─ heart/
+│   ├─ ml-100k/
+│   ├─ IMDB/
+│   └─ AirQuality/
+│
+├─ notebooks/
+│   ├─ heart_analysis.ipynb
+│   ├─ movielens_analysis.ipynb
+│   ├─ imdb_preprocessing.ipynb
+│   └─ air_quality_analysis.ipynb
+│
+├─ scripts/
+│   └─ data_preprocessing.py
+│
+└─ README.md
+ Notes
+Always ensure correct CSV separators when reading data (',' vs ';')
+Handle missing values and invalid timestamps before modeling
+For NLP tasks, download NLTK data before preprocessing:
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
+Resample and interpolate time series for consistent hourly data
